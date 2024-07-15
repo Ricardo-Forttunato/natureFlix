@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import InicialPage from "./Components/Pages/InicialPage";
-import NewVideo from "./Components/Pages/NewVideo";
-import NotFoundPage from "./Components/Pages/NotFoundPage";
-import GlobalPages from "./Components/Pages/GlobalPages";
+import GlobalPages from "./Pages/GlobalPages";
+import InicialPage from "./Pages/InicialPage";
+import NewVideo from "./Pages/NewVideo";
+import NotFoundPage from "./Pages/NotFoundPage";
 
 function AppRoutes() {
   return (

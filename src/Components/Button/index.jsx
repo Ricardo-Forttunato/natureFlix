@@ -26,7 +26,6 @@ const BtnStyled = styled(Link)`
 export default function Button(props) {
     return (
         <BtnStyled
-			as={Link}
 			to={props.to}
 		>{props.title}</BtnStyled>
     );
