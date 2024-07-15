@@ -23,6 +23,18 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'RobotoBlack';
     src: local('Roboto Black'), local('RobotoBlack'), url(${RobotoBlack}) format('truetype');
   }
+  :root {
+    --color-white: #fff;
+    --color-gray-light: #f5f5f5;
+    --color-black-dark: rgba(0, 0, 0, 0.9);
+    --color-Error: #E53935;
+    --color-blue: #2271D1;
+    --color-light-gray: #A5A5A5;
+    --color-dark-gray: #262626;
+    --color-front-end: #6BD1FF;
+    --color-back-end: #00C86F;
+    --color-mobile: #FFBA05;    
+  }
   html {
     line-height: 1.15; 
     -webkit-text-size-adjust: 100%; 
