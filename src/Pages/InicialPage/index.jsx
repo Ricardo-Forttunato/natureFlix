@@ -1,4 +1,4 @@
-import Banner from "../../Banner";
+import Banner from "../../Components/Banner";
 import styled from "styled-components";
 
 const ContainerContent = styled.div`
