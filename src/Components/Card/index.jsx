@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import {styled} from 'styled-components';
 
 const Div = styled.div`
@@ -48,7 +49,7 @@ const FooterContainer = styled.div`
 	}
 `;
 
-export default function Card({  title, link, image, description, categories }) {
+export default function Card({  title, image, categories }) {
 
     return (
         <Div>
@@ -60,15 +61,13 @@ export default function Card({  title, link, image, description, categories }) {
 					boxShadow: `0px 0px 17px 8px var(--color-${categories}) inset`
 			}}
 			>
-				<a href={link}>
-					<img src={image} alt={title} />
-				</a>      
+				<img src={image} alt={title} />   
 			</CardContainer>
 			<CardFooter
 				style={{
 					borderBottom:` 4px solid var(--color-${categories})`,
 					borderLeft:` 4px solid var(--color-${categories})`,
-					borderRight:` 4px solid var(--color-${categories})`
+					borderRight:` 4px solid var(--color-${categories})`,
 			}}
 			>
 				<FooterContainer>

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import styled from "styled-components";
 import Card from "../Card";
 import { useEffect, useState } from "react";
@@ -27,14 +28,14 @@ const DivCard = styled.div`
     overflow-x: auto;
 `;
 
-export default function CardContainer({categories}) {
+export default function CardContainer() {
 
     const [cardList, setCardList] = useState([]);
 
     const ListaCategories = [{id: 1, title: 'front-end'}, {id: 2, title: 'back-end'}, {id: 3, title: 'mobile'}];
 
     useEffect(() => {
-        fetch('https://my-json-server.typicode.com/Ricardo-Forttunato/aluraFlix-api/cards')
+        fetch('https://my-json-server.typicode.com/Ricardo-Forttunato/natureFlix/cards')
         .then(Response => Response.json())
         .then(data => setCardList(data))
     }, []);
@@ -49,11 +50,11 @@ export default function CardContainer({categories}) {
                         style={{backgroundColor: `var(--color-${item.title})`}}
                     >{item.title}</TextStyled>
                     <DivCard>
-                        {cardList.filter((card) => card.categories === item.title) && cardList.filter((card) => card.categories === item.title).map((card) => {
+                        {cardList.filter((card) => card.categories === item.title && card.id > 0).map((card) => {
                             return(
                                 <Card
                                     key={card.id}
-                                    link={card.link}
+                                    title={card.title}
                                     image={card.image}
                                     categories={card.categories}
                                 />
