@@ -2,7 +2,7 @@
     "cards":[{
         "id": 1,
         "title": "Predadores Brutais e Natureza Épica",
-        "image": "https://github.com/Ricardo-Forttunato/natureFlix/blob/main/public/image/image1.png",
+        "image": "https://github.com/Ricardo-Forttunato/natureFlix/blob/main/public/image/image1.png?raw=true",
         "video": "https://youtu.be/fzNdaX0Fwss?si=bc7HhkT_i8I1CsXp",
         "description": "Neste documentário dublado, vamos explorar a extraordinária Savana Africana, um dos ecossistemas mais ricos, impressionantes e fascinantes do mundo.",
         "categories": "front-end" 
