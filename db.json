@@ -3,21 +3,21 @@
         "id": 1,
         "title": "Predadores Brutais e Natureza Épica",
         "image": "https://github.com/Ricardo-Forttunato/natureFlix/blob/main/public/image/capa1.png?raw=true",
-        "video": "https://youtu.be/fzNdaX0Fwss?si=bc7HhkT_i8I1CsXp",
+        "video": "https://www.youtube.com/embed/fzNdaX0Fwss?si=bc7HhkT_i8I1CsXp",
         "description": "Neste documentário dublado, vamos explorar a extraordinária Savana Africana, um dos ecossistemas mais ricos, impressionantes e fascinantes do mundo.",
         "categories": "front-end" 
     },{
         "id": 2,
         "title": "Alpes, o último santuário da Europa",
         "image": "https://github.com/Ricardo-Forttunato/natureFlix/blob/main/public/image/capa3.png?raw=true",
-        "video": "https://youtu.be/ykhKHl7SxRM?si=rjsj-DEpl0a_Lu0F",
+        "video": "https://www.youtube.com/embed/ykhKHl7SxRM?si=rjsj-DEpl0a_Lu0F",
         "description": "Terceira obra da coleção O País Mais Bonito do Mundo, este documentário revela as belezas e os segredos dos Alpes. Prepare-se para descobrir um mundo insuspeitado, impiedoso e maravilhoso. Uma grande viagem ao último santuário da Europa.",
         "categories": "front-end" 
     },{
         "id": 3,
         "title": "A Rainha Leão: Rainha Manyari de seu orgulho",
         "image": "https://github.com/Ricardo-Forttunato/natureFlix/blob/main/public/image/capa2.png?raw=true",
-        "video": "https://youtu.be/2gyw_c67tIY?si=62dhYqxZLlu8b8PE",
+        "video": "https://www.youtube.com/embed/2gyw_c67tIY?si=62dhYqxZLlu8b8PE",
         "description": "Ela é caçadora, assassina, irmã, mas acima de tudo uma mãe altruísta. Logo depois de conhecer Manyari, rainha de seu orgulho, ela faz algo incomum e ousado. Ela deixa o santuário de sua família com seus filhotes e os leva em uma perigosa odisséia.",
         "categories": "front-end" 
     },{
