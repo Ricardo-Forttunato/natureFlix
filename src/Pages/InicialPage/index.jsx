@@ -1,5 +1,8 @@
 import Banner from "../../Components/Banner";
 import styled from "styled-components";
+import Card from "../../Components/Card";
+import { useEffect, useState } from "react";
+import CardContainer from "../../Components/CardContainer";
 
 const ContainerContent = styled.div`
   	width: 1440px;
@@ -8,18 +11,23 @@ const ContainerContent = styled.div`
   	margin: 0 auto;
 `;
 
-const TextStyled = styled.h1`
-    font-size: 2.5rem;
-    color: #fff;
-    text-align: center;
-    margin-top: 5rem;
+const Section = styled.section`
+    width: 1356px;
+    max-width: 100vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 `;
 
 export default function InicialPage() {
+    
+
     return (
         <ContainerContent>
             <Banner />
-            <TextStyled>Teste de conteudo</TextStyled>
+            <Section>
+                <CardContainer />
+            </Section>
         </ContainerContent>
     )
 }
