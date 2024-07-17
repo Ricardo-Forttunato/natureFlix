@@ -16,6 +16,7 @@ const TextAreaStyled = styled.input`
   height: 193px; 
   font-size: 20px;
   font-weight: 600;
+  color: #fff;
   border: 3px solid var(--color-dark-gray);
   background-color: #191919;
   border-radius: 10px;
@@ -44,8 +45,6 @@ export default function FormTextArea(props) {
       <TextAreaStyled
         id={`fom_${props.name}`}
         name={props.name}
-        rows="5"
-        cols="50"
         placeholder={props.placeHolder}
       >
       </TextAreaStyled>

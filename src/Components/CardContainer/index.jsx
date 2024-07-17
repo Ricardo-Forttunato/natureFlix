@@ -2,6 +2,7 @@
 import styled from "styled-components";
 import Card from "../Card";
 import { useEffect, useState } from "react";
+import ModalEdit from "../ModalEdit";
 
 const TextStyled = styled.h1`
     color: var(--color-white);
@@ -15,7 +16,7 @@ const TextStyled = styled.h1`
     vertical-align: middle;
     margin: 0 0 40px 0;
     padding: 0;
-    width: 432px;
+    max-width: 432px;
     height: 70px;
     border-radius: 15px;
 `;
@@ -29,10 +30,9 @@ const DivCard = styled.div`
 `;
 
 export default function CardContainer() {
+    const ListaCategories = [{id: 1, title: 'natureza-selvagem'}, {id: 2, title: 'natureza-cidade'}, {id: 3, title: 'resgate'}];
 
     const [cardList, setCardList] = useState([]);
-
-    const ListaCategories = [{id: 1, title: 'front-end'}, {id: 2, title: 'back-end'}, {id: 3, title: 'mobile'}];
 
     useEffect(() => {
         fetch('https://my-json-server.typicode.com/Ricardo-Forttunato/natureFlix/cards')
@@ -42,25 +42,33 @@ export default function CardContainer() {
 
     return (
         <>
-            {ListaCategories.map((item, index) => {
+            {ListaCategories.map((item) => {
                 return(
                 <>
                     <TextStyled 
-                        key={index}
+                        key={item.id}
                         style={{backgroundColor: `var(--color-${item.title})`}}
-                    >{item.title}</TextStyled>
+                    >
+                        {item.title}
+                    </TextStyled>
                     <DivCard>
-                        {cardList.filter((card) => card.categories === item.title && card.id > 0).map((card) => {
+                        {cardList.filter((card) => card.categories === item.title && card.id > 0).map((card, index) => {
+                            const deleteCard = () => {
+                                const newCardList = cardList.filter((cardItem) => cardItem.id !== card.id);
+                                setCardList(newCardList);
+                            }
                             return(
                                 <Card
-                                    key={card.id}
+                                    key={index}
                                     title={card.title}
                                     image={card.image}
                                     categories={card.categories}
+                                    cardDelete={deleteCard}
                                 />
                             )
                         })}
                     </DivCard>
+                    <ModalEdit />
                 </>
                 )
             })}

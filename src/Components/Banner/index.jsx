@@ -1,26 +1,26 @@
+/* eslint-disable react/prop-types */
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import styled from "styled-components";
 
 const BannerStyled = styled.div`
-    background-image: url('/image/player.png');
     background-blend-mode: darken, luminosity;
     background-color: rgba(0, 18, 51, 0.56);
     background-size: 100% 105%;
     background-repeat: no-repeat;
     background-position-y: -110px;
-    width: 1440px;
-    max-width: 100vw;
     height: 744px;
-    position: relative;  
+    position: relative;
 `;
 
 const TitleStyled = styled.h1`
-    width: 297px;
+    width: 362px;
     height: 92px;
     margin: 0;
     background-color: #6BD1FF;
     font-family: 'Roboto', sans-serif;
     color: #F5F5F5;
-    font-size: 3rem;
+    font-size: 2rem;
     text-transform: uppercase;
     border-radius: 15px;
     display: flex;
@@ -31,13 +31,14 @@ const TitleStyled = styled.h1`
     left: 40px;
 `;
 
-const BannerImg = styled.img`
+const BannerPlayer = styled.div`
     position: absolute;
     top: calc(343px - 125px);
     right: 40px;
-   
+    margin: 0;
 `
 const BannerText = styled.h3`
+    max-width: 640px;
     margin: 0;
     font-size: 2.8rem;
     font-family: 'Roboto Regular', sans-serif;
@@ -54,20 +55,48 @@ const BannerParagraph = styled.p`
     font-weight: 300;
     color: #F5F5F5;
     text-align: justify;
-    max-width: 663px;
+    max-width: 640px;
     min-height: 110px;
     position: absolute;
     bottom: 161px;
     left: 43px;
 `;
 
-export default function Banner() {
+export default function Banner({ id, title, image, categories, deleteCard }) {
+
+    const [player, setPlayer] = useState([]);
+
+    const param = useParams();
+
+    useEffect(() => {
+        fetch(`https://my-json-server.typicode.com/Ricardo-Forttunato/natureFlix/cards/2`)
+        .then(Response => Response.json())
+        .then(data => setPlayer(data))
+    }, []);
+
     return (
-        <BannerStyled>
-            <TitleStyled>FrontEnd</TitleStyled>
-            <BannerImg src="/image/player.png" alt="Imagem de um player de video"/>
-            <BannerText>SEO com React</BannerText>
-            <BannerParagraph>Eu to aqui pra nesse vídeo dizer que a gente vai aprender a começar uma app inspirada no desenho Pokémon com Nextjs e React, ver algumas dicas sobre performance e de quebra conhecer uma plataforma sensacional pra fazer deploy que é a Vercel. Tudo em 22 minutos nesse vídeo feito com todo o carinho do mundo construindo uma &quot;Pokedex&quot;! </BannerParagraph>
+        <BannerStyled
+            style={{backgroundImage: `url(${player.image})`}}
+        >
+            <TitleStyled
+                style={
+                    {backgroundColor: `var(--color-${player.categories})`}
+            }
+            >{player.categories}
+            </TitleStyled>
+            <BannerPlayer >
+                <iframe
+                    width="646px" 
+                    height="333px" 
+                    src={player.video} 
+                    title={player.title}
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowFullScreen
+                ></iframe>
+            </BannerPlayer>
+            <BannerText>{player.title}</BannerText>
+            <BannerParagraph>{player.description}</BannerParagraph>
         </BannerStyled>
     )
 }

@@ -40,9 +40,9 @@ export default function FormSelect(props) {
 
   const categorias = [
     "Selecione uma categoria!",
-    "Frontend",
-    "Backend",
-    "Mobile",
+    "Natureza Selvagem",
+    "Natureza Cidade",
+    "Resgate",
   ];
 
   return (

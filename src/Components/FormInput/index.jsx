@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-
 import styled from "styled-components"
 
 const ContainerStyled = styled.div`
@@ -13,6 +12,7 @@ const InputStyled = styled.input`
   height: 62px; 
   font-size: 20px;
   font-weight: 600;
+  color: #fff;
   border: 3px solid var(--color-dark-gray);
   background-color: #191919;
   border-radius: 10px;

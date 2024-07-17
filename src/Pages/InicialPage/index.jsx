@@ -1,7 +1,5 @@
 import Banner from "../../Components/Banner";
 import styled from "styled-components";
-import Card from "../../Components/Card";
-import { useEffect, useState } from "react";
 import CardContainer from "../../Components/CardContainer";
 
 const ContainerContent = styled.div`
@@ -21,10 +19,9 @@ const Section = styled.section`
 
 export default function InicialPage() {
     
-
     return (
         <ContainerContent>
-            <Banner />
+            <Banner/>
             <Section>
                 <CardContainer />
             </Section>

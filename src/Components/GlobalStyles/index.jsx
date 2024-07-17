@@ -31,9 +31,9 @@ const GlobalStyles = createGlobalStyle`
     --color-blue: #2271D1;
     --color-light-gray: #A5A5A5;
     --color-dark-gray: #262626;
-    --color-front-end: #6BD1FF;
-    --color-back-end: #00C86F;
-    --color-mobile: #FFBA05;    
+    --color-natureza-selvagem: #6BD1FF;
+    --color-natureza-cidade: #00C86F;
+    --color-resgate: #FFBA05;    
   }
   html {
     line-height: 1.15; 
