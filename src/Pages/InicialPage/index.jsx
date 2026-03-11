@@ -1,6 +1,7 @@
 import Banner from "../../Components/Banner";
 import styled from "styled-components";
 import CardContainer from "../../Components/CardContainer";
+// import ModalEdit from "../../Components/ModalEdit";
 
 const ContainerContent = styled.div`
   	width: 1440px;
@@ -15,15 +16,18 @@ const Section = styled.section`
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    position: relative;
+    top: -35px;
 `;
 
 export default function InicialPage() {
-    
+
     return (
         <ContainerContent>
             <Banner/>
             <Section>
                 <CardContainer />
+                {/* <ModalEdit /> */}
             </Section>
         </ContainerContent>
     )

@@ -2,7 +2,6 @@
 import styled from "styled-components";
 import Card from "../Card";
 import { useEffect, useState } from "react";
-import ModalEdit from "../ModalEdit";
 
 const TextStyled = styled.h1`
     color: var(--color-white);
@@ -52,26 +51,26 @@ export default function CardContainer() {
                         {item.title}
                     </TextStyled>
                     <DivCard>
-                        {cardList.filter((card) => card.categories === item.title && card.id > 0).map((card, index) => {
+                        {cardList.filter((card) => card.categories === item.title).map((card) => {
                             const deleteCard = () => {
                                 const newCardList = cardList.filter((cardItem) => cardItem.id !== card.id);
                                 setCardList(newCardList);
                             }
                             return(
                                 <Card
-                                    key={index}
+                                    key={card.id}
                                     title={card.title}
                                     image={card.image}
                                     categories={card.categories}
                                     cardDelete={deleteCard}
                                 />
-                            )
-                        })}
+                            )})
+                        }
                     </DivCard>
-                    <ModalEdit />
                 </>
                 )
             })}
+            
         </>
     )
 }

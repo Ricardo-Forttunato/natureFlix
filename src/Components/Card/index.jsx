@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import { useState } from 'react';
 import {styled} from 'styled-components';
 
 const Div = styled.div`
@@ -55,7 +54,7 @@ const FooterContainer = styled.div`
 	}
 `;
 
-export default function Card({ id, title, image, categories, cardDelete, openModal }) {
+export default function Card({ id, title, image, categories, cardDelete }) {
 
     return (
         <Div>
@@ -86,7 +85,6 @@ export default function Card({ id, title, image, categories, cardDelete, openMod
 					<img 
 						src="/icones/edit.png" 
 						alt="icone de lapis"
-						onClick={openModal}
 					/>
 					<p>Editar</p>
 				</FooterContainer>

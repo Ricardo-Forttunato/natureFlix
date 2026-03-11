@@ -112,6 +112,8 @@ const FormContainer = styled.form`
     }
     resize: none;
   }
+
+  /* Teste de estlização input type=submit & reset */
   && input[type="reset"],
   && input[type="submit"] {
     width: 180px;

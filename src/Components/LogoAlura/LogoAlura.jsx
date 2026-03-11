@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const LogoStyled = styled.img`
-  	width: 168px;
-  	height: 40px;
+  	width: 360px;
+  	height: 120px;
     cursor: pointer;
 `;
 
